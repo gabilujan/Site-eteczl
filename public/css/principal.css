@@ -1,0 +1,271 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 13px;
+    overflow-x: hidden; /* Ignora o que ultrapassar na horizontal*/
+}
+header {
+    height: 100px;
+    background-color: white;
+
+    width: 100%;
+    position: fixed;
+	top: 0;
+	z-index: 100;
+}
+.header {
+    max-width: 1140px; /* 1140 px -> Máximo que conteúdo expandirá lateralmente*/
+    height: 100px;
+    margin: auto; /* Centralizar*/
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+}
+.menu {
+    width: 50%;
+    flex: 1;
+    background-color: #FDFEFF;
+    display: flex;
+    justify-content: center;
+}
+.menu nav {
+    margin-top: 8px;
+}
+.sociais button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin-right: 10px;
+    background-color: #EBF6FF;
+    border-radius: 80px;
+    cursor: pointer;
+}
+.sociais a {
+    text-decoration: none;
+}
+
+.sociais button i{
+    font-size: 20px;
+    color: black;
+}
+
+.menu ul,
+.menu li {
+    list-style: none;
+}
+.menu ul {
+    display: flex;
+}
+.menu li a {
+    color: #4d555e;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: 100px;
+    text-decoration: none;
+    padding: 0px 20px;
+    margin: 0px 4px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+}
+.menu a:hover {
+    background-color: #F4F6F9;
+    color: #0A0C0D;
+    cursor: pointer;
+}
+
+/* Opção atual do menu */
+.menu .atual a{
+    color: #5129cc;
+    background-color: #F2EDFF;
+}
+.button {
+    display: inline-block;
+    background-color: #0000ff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+}
+button:focus {
+    outline: 0;
+}
+.slidearea a:hover, .section-aboutus--left a:hover, .footer--item.area3 a:hover {
+    background-color: #0000ff;
+    transition: 0.3s;
+}
+
+            /* main */
+/* Área dos slides*/
+.banner {
+    height: calc(100vh); /* Altura total do monitor - header*/
+    background-color: #E2F2FD;
+    background-image: url('../img/provas.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.banner .slide {
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+}
+.banner .slidearea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Merriweather';
+    margin-top: 35px;
+}
+.banner h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
+.banner h1 span {
+    color: #B28756;
+    font-family: sans-serif;
+}
+.banner h2 {
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.banner .sliders-pointers {
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #B28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.banner .pointer.active {
+    background-color: #B28756;
+}
+
+/* Quem somos */
+.default {
+    background-color: #FCE9CB;
+    padding-top: 50px;
+    padding-bottom: 50px;   
+}
+.default .section-title, .default .section-desc  {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.default .section-title {
+    font-size: 20px;
+    font-family: 'Merriweather';
+}
+.default .section-desc {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.default .section-body {
+    max-width: 1140px;
+    margin: auto;
+}
+/* Tema 1 */
+.default.light {
+    background-color: white;
+}
+.default.light .section-title,
+.default.light .section-body {
+    color: black;
+}
+/* Tema 2 */
+.default.dark {
+    background-color: #EBF6FF;
+}
+.default.dark .section-title,
+.default.dark .section-body {
+    color: black;
+}
+
+
+/* CSS DE ÁREAS ESPECÍFICAS */
+.section-aboutus {
+    display: flex;
+}
+.section-aboutus--left {
+    flex: 1;
+}
+.section-aboutus--left p {
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 28px;
+}
+.section-aboutus--right {
+    width: 500px;
+    text-align: center;
+}
+.section-aboutus--right img {
+    height: 380px;
+    width: auto;
+    box-shadow: 1px 1px 10px #333;
+}
+.section-aboutus--right.nova img {
+    width: 500px;
+    height: auto;
+    box-shadow: 1px 1px 10px #333;
+}
+
+/* Valores*/
+.section-services {
+    display: flex;
+}
+.section-service {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 15px;
+}
+.section-service:first-child {
+    border-left: 1px solid #333;
+}
+.section-service h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.section-service img {
+    width: 95px;
+    height: 105px;
+}
+.section-service p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #82909d;
+}
+
